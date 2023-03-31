@@ -5,6 +5,7 @@ node_modules
 .history
 package-lock.json
 notes.md
+proposal.md
 .env
 
 # Logs
