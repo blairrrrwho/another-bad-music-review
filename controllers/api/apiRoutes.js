@@ -1,4 +1,5 @@
 const router = require('express').Router();
+
 const request = require('request');
 
 router.get('/albums', async (req, res) => {
@@ -52,3 +53,4 @@ router.get('/albums', async (req, res) => {
 });
 
 module.exports = router;
+
