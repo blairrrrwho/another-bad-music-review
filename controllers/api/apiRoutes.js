@@ -1,7 +1,5 @@
 const router = require('express').Router();
 
-const request = require('request');
-
 router.get('/albums', async (req, res) => {
   try {
     const artist = req.params.artist;

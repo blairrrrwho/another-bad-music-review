@@ -35,6 +35,10 @@ User.init(
         len: [8],
       },
     },
+    bio: {
+      type: DataTypes.TEXT,
+      allowNull: true, 
+    },
   },
   {
     hooks: {
