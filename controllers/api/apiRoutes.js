@@ -1,54 +1,56 @@
 const router = require('express').Router();
-const request = require('request');
+const axios = require('axios');
 
-router.get('/albums', async (req, res) => {
-  try {
-    const artist = req.params.artist;
-    const album = req.params.album;
-    const API_KEY = '91555f1f00msh06eeb81671ccbb7p167bf4jsn21e60eb52bdf';
+const client_id = 'f1135d99729746f1a131d1106e8fc9a0';
+const client_secret = '89fd130d397f4927a45cf692bd09f32d';
 
-    const options = {
-      method: 'GET',
-      url: 'https://theaudiodb.p.rapidapi.com/searchalbum.php',
-      qs: { s: artist, a: album },
-      headers: {
-        'x-rapidapi-key': API_KEY,
-        'x-rapidapi-host': 'theaudiodb.p.rapidapi.com',
-        'useQueryString': true
-      }
-    };
+// Authenticate your requests
+axios({
+  method: 'post',
+  url: 'https://accounts.spotify.com/api/token',
+  params: {
+    grant_type: 'client_credentials',
+  },
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Authorization': 'Basic ' + Buffer.from(client_id + ':' + client_secret).toString('base64'),
+  },
+})
+.then(response => {
+  const access_token = response.data.access_token;
 
-    request(options, function (error, response, body) {
-      if (error) {
-        console.error(error);
-        res.status(500).send('An error occurred while fetching the album data.');
-        return;
-      }
-
-      if (response.statusCode !== 200) {
-        console.error(`Unexpected status code: ${response.statusCode}`);
-        res.status(500).send('An error occurred while fetching the album data.');
-        return;
-      }
-
-      const data = JSON.parse(body);
-
-      // Handle cases where no album is found
-      if (!data.album) {
-        res.status(404).send('Album not found');
-        return;
-      }
-
-      const albumData = data.album[0];
-      const albumCover = albumData.strAlbumThumb;
-
-      // Send album cover image URL as response
-      res.send(albumCover);
-    });
-  } catch (error) {
+  // Make a request to get album cover art
+  axios({
+    method: 'get',
+    url: 'https://api.spotify.com/v1/albums/4aawyAB9vmqN3uQ7FjRGTy',
+    headers: {
+      'Authorization': 'Bearer ' + access_token,
+    },
+  })
+  .then(response => {
+    const album_cover = response.data.images[0].url;
+    console.log(album_cover);
+  })
+  .catch(error => {
     console.error(error);
-    res.status(500).send('An error occurred while fetching the album data.');
-  }
+  });
+})
+.catch(error => {
+  console.error(error);
 });
 
-module.exports = router;
+router.get('/albumcover/:artist/:album', async (req, res) => {
+  try {
+    const { artist, album } = req.params;
+    const response = await axios.get(`https://api.spotify.com/v1/search?q=${album}+artist:${artist}&type=album&limit=1`, {
+      headers: {
+        Authorization: `Bearer YOUR_ACCESS_TOKEN_HERE`
+      }
+    });
+    const imageUrl = response.data.albums.items[0].images[0].url;
+    res.send(`<img src="${imageUrl}" alt="${album} album cover">`);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error retrieving album cover');
+  }
+});
