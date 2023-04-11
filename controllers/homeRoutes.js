@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ['commentBody'],
+          attributes: ['comment_body'],
         },
       ],
     });
@@ -41,7 +41,7 @@ router.get('/post/:id', async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ['commentBody'],
+          attributes: ['comment_body'],
         },
       ],
     });
