@@ -7,6 +7,13 @@ body {
   background-color: #ECF2FF;
 }
 
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 h1 {
   color: #3E54AC;
   text-align: center;
@@ -18,11 +25,26 @@ h1 {
   border-padding: 90px; */
 
 }
-img {
+.headerImg {
   opacity: 0.2;
+  position: absolute;
+  left: 350px;
+  top: 0;
+  width: 70%;
+  height: 100%;
+  scale: 1;
 }
-
+.content {
+  display: flex;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+}
 h6 {
   padding: 100px;
   text-align: center;
+}
+
+input {
+  width: 300px !important
 }
