@@ -1,5 +1,6 @@
 body {
   background-color: #ECF2FF;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
@@ -7,5 +8,4 @@ body {
 h1 {
   color: #3E54AC;
   text-align: center;
-  font-family: fantasy;
 }

@@ -11,8 +11,8 @@ const newFormHandler = async (event) => {
         { title: name, 
           description: description,
         // date_created: date_created, //add date created
-          like: like,
-          dislike: dislike
+          // like: like,
+          // dislike: dislike
         }),
       headers: {
         'Content-Type': 'application/json',
