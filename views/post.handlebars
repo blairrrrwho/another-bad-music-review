@@ -1,10 +1,22 @@
 <div class='text-center'>
-  <h1>{{title}}</h1>
-  <h4>{{description}}</h4>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <h1>{{title}}</h1> <br>
+  <h3>{{description}}</h3>
+  <h5>Created by {{user.name}} on {{format_date date_created}}</h5>
+  <br><br><br>
 
   {{#if logged_in}}
-    <section>
+    <form class="form new-comment-form">
+      <div class="comment-group">
+        <label for="comment-name">Comments??</label>
+        <input class="form-input" type="text" id="comment-name" name="comment-name" />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Post Comment</button>
+      </div>
+    </form>
+
+
+    {{!-- <section>
       <label>Comment</label>
       <textarea
         name='comment'
@@ -13,11 +25,15 @@
         placeholder='Your Message..'
       ></textarea>
       <button>Comment</button>
-    </section>
-    <a href='/profile'>profile</a>
-    <button class='no-button' id='logout'>logout</button>
+    </section> --}}
+
+    {{!-- <a href='/profile'>profile</a>
+    <button class='no-button' id='logout'>logout</button> --}}
   {{else}}
     <a href='/login'> You must login, goofball!</a>
   {{/if}}
 
 </div>
+
+
+
