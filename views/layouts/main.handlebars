@@ -11,27 +11,25 @@
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
+    <nav class="display-flex justify-space-between align-center p-2" id="nav-bar">
       <h1>
-        <a href="/">My Bad Music Taste</a>
+        <a href="/" id="main-title">My Bad Music Taste</a>
       </h1>
-      <nav>
+      
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile">Profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <button class="no-button" id="logout">Logout</button>
         {{else}}
         <a href="/login">Login</a>
         {{/if}}
-      </nav>
-    </header>
+      
+    </nav>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-    <footer>
-      
-    </footer>
+    <footer class="footer">&copy; 2023 Another Bad Music Review</footer>
   </div>
 
   <!-- Render script for logged in users only -->
