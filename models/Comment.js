@@ -11,9 +11,9 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    commentBody: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    comment_body: {
+      type: DataTypes.TEXT,
+      // allowNull: false,
     },
     date_created: {
       type: DataTypes.DATE,
