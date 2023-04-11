@@ -1,5 +1,7 @@
 const router = require('express').Router();
 
+// i think we can get rid of all of this?? 
+
 router.get('/albums', async (req, res) => {
   try {
     const artist = req.params.artist;
