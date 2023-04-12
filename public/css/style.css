@@ -1,33 +1,51 @@
+@font-face {
+  font-family: 'PressStart';
+  src: url(PressStart2P-Regular.ttf);
+}
+
 body {
   background-color: #a7b3cc67;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#nav-bar {
-  background-color: #4d5f51;
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-#main-title {
-  color: #f7d335;
-  text-align: center;
-}
-
 h1 {
   color: #3E54AC;
   text-align: center;
+  font-family: 'PressStart', Arial, Helvetica, sans-serif;
+  text-align: center;
+  /* border-style: solid;
+  border-color: #BFACE2;
+  border-width: 10px;
+  border-padding: 90px; */
+
 }
-/* 
-h1 {
-  color: #3E54AC;
+.headerImg {
+  opacity: 0.2;
+  position: absolute;
+  left: 350px;
+  top: 0;
+  width: 70%;
+  height: 100%;
+  scale: 1;
+}
+.content {
+  display: flex;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+}
+h6 {
+  padding: 100px;
   text-align: center;
 }
 
-h1 {
-  color: #3E54AC;
-  text-align: center;
-} */
-
-.footer {
-  text-align: right;
-  padding: 2%;
+input {
+  width: 300px !important
 }
