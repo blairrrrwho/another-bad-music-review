@@ -7,7 +7,13 @@ const newFormHandler = async (event) => {
   if (name && description) {
     const response = await fetch(`/api/post`, {
       method: 'POST',
-      body: JSON.stringify({ name, description }),
+      body: JSON.stringify(
+        { title: name, 
+          description: description,
+        // date_created: date_created, //add date created
+          // like: like,
+          // dislike: dislike
+        }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -43,4 +49,4 @@ document
 
 document
   .querySelector('.post-list')
-  .addEventListener('click', delButtonHandler);
+  .addEventListener('submit', delButtonHandler);
