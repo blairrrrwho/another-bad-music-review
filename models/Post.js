@@ -27,13 +27,12 @@ Post.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    like: {
+    vote: {
       type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    dislike: {
-      type: DataTypes.INTEGER,
-      allowNull: true
+      references: {
+        model: 'Vote',
+        key: 'id',
+      },
     },
     // comments: {
     //   type: DataTypes.STRING,

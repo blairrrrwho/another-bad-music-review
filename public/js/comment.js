@@ -1,35 +1,3 @@
-// async function commentFormHandler(event) {
-//     console.log("this has posted a comment");
-//     event.preventDefault();
-  
-//     const comment_text = document.querySelector(`#comment-name`);
-//     console.log(comment_text);
-  
-//     const post_id = window.location.toString().split('/')[
-//       window.location.toString().split('/').length - 1
-//     ];
-  
-//     if (comment_text) {
-//         const response = await fetch('/api/comment', {
-//           method: 'POST',
-//           body: JSON.stringify({
-//             post_id,
-//             comment_text
-//           }),
-//           headers: {
-//             'Content-Type': 'application/json'
-//           }
-//         });
-      
-//         if (response.ok) {
-//           window.location.href= `/post/${post_id}`;
-//         } else {
-//           alert(response.statusText);
-//         }
-//       }
-//   }
-  
-//   document.querySelector('#comment').addEventListener('click', commentFormHandler);
 
 console.log("ready to post a comment to a post");
 
@@ -65,3 +33,44 @@ newCommentBtn.addEventListener("click", async (e) => {
     }
   });
 });
+
+var like = document.querySelector(".like")
+var dislike = document.querySelector(".dislike")
+
+like.addEventListener("click", async(e) => {
+  e.preventDefault()
+
+  console.log("liked")
+
+  var likeValue = document.querySelector(".like").value
+  console.log(likeValue)
+
+  const url = window.location.href;
+  const data = url.split("/");
+  const post_id = data[data.length - 1];
+
+  await fetch("/api/vote", {
+    method: "POST",
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      vote: likeValue,
+      post_id: post_id,
+    }),
+  }).then((res) => {
+    console.log(res);
+    if (res.status == 200) {
+      window.location.href = `/post/${post_id}`;
+    }
+  });
+
+})
+
+dislike.addEventListener("click", async(e) => {
+  e.preventDefault()
+
+  console.log("disliked")
+
+})

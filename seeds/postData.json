@@ -2,29 +2,24 @@
   {
     "title": "Mr. Morale & The Big Steppers",
     "description": "A very conceptial album that is deeper than just music", 
-    "date_created": "7/15/1998",
-    "like": true,
-    "dislike": false
+    "date_created": "7/15/1998"
+
   },
   {
     "title": "RED",
     "description": "It was so good! It changed my life",
-    "date_created": "7/15/1998",
-    "like": true,
-    "dislike": false
+    "date_created": "7/15/1998"
+
   },
   {
     "title": "Illmatic",
     "description": "One of the most classic hip-hop albums of all time",
-    "date_created": "4/6/1997",
-    "like": false,
-    "dislike": true
+    "date_created": "4/6/1997"
+
   },
   {
     "title": "CALM",
     "description": "Saw the tour which was amazing. Most songs were good but a lot of fillers",
-    "date_created": "01/01/2001",
-    "like": true,
-    "dislike": false
+    "date_created": "01/01/2001"
   }
 ]
