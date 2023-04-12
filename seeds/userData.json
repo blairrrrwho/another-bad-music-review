@@ -1,17 +1,20 @@
 [
   {
+    "id": 1,
     "name": "test1",
     "email": "test1@hotmail.com",
     "password": "password12345",
     "bio": "I am tester 1"
   },
   {
+    "id": 2,
     "name": "test2",
     "email": "test2@Gmail.com",
     "password": "password12345",
     "bio": "I am tester 2"
   },
   {
+    "id": 3,
     "name": "test3",
     "email": "tes3@yahoo.com",
     "password": "password12345",
