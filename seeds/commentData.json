@@ -1,6 +1,7 @@
 [
     {
-      "title": "Test",
-      "description": "testtesttesttest"
+      "comment_body": "testtesttesttest",
+      "date_created": "01/20/1993",
+      "post_id": 3
     }
-  ]
+]
