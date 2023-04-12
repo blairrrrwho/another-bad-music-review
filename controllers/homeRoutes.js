@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ['commentBody'],
+          attributes: ['comment_body'],
         },
       ],
     });
@@ -22,14 +22,15 @@ router.get('/', async (req, res) => {
     const posts = postData.map((post) => post.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      posts, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      posts,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 router.get('/post/:id', async (req, res) => {
   try {
@@ -41,15 +42,19 @@ router.get('/post/:id', async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ['commentBody'],
+          attributes: ['comment_body'],
         },
       ],
     });
 
-    const post = postData.get({ plain: true });
+const post = postData.get({ plain: true });
+console.log(postData);
+    const com = await postData.comments.map((comm) => comm.get({ plain: true}))
+    console.log(com);
 
     res.render('post', {
       ...post,
+      com,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -70,7 +75,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     res.render('profile', {
       ...user,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
