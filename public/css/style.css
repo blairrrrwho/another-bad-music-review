@@ -7,29 +7,30 @@ body {
   background-color: #ECF2FF;
 }
 
-.wrapper {
+/* .wrapper {
   overflow: hidden;
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  /* justify-content: center;
+  align-items: center; }*/
+
 h1 {
   color: #3E54AC;
-  text-align: center;
   font-family: 'PressStart', Arial, Helvetica, sans-serif;
-  text-align: left;
+  text-align: center;
   border-style: dashed;
   border-color: #BFACE2;
   border-width: 10px;
   letter-spacing: 12px;
-  padding: 4%;
+  padding: .1%;
   display: inline-block;
-  width: 85px;
-  padding-right: 40px;
-  
+  width: 80px;
+  margin-left: 42.5%;
 
 }
+
+
+
 /* .headerImg {
   opacity: 0.2;
   position: absolute;
@@ -57,6 +58,11 @@ input {
   width: 300px !important
 }
 
-@media screen and (max-width: 980px){
-  
-}
+@media screen and (max-width: 980px) {
+  img {
+    width: 200px; }
+    
+    /* .flex-container {
+      display: flex;
+      flex-direction: row; */
+    }
