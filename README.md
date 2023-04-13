@@ -12,7 +12,6 @@ Another Bad Music Review is a user-friendly web application designed to provide 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Deployment](#deployment)
-- [Features](#features)
 - [Technologies](#technologies)
 - [License](#license)
 - [Developers](#developers)
@@ -38,8 +37,6 @@ Another Bad Music Review is a user-friendly web application designed to provide 
 ## Deployment
 Live URL: <a href="https://another-bad-music-review-woo.herokuapp.com/">Another Bad Music Review</a>
 
-## Features
-add in NPM PACKAGES INFO HERE
 
 
 ## Technologies
