@@ -1,62 +1,42 @@
-<div class='card mb-6'>
+<div class='card postcard mb-6'>
   <header class="card-header card-header-title has-background-grey-lighter">
     <div class="column">
       <h3>
         {{title}}
       </h3>
     </div>
-
     <div class="column">
       <span class=""> </span>
     </div>
   </header>
+  <br>
 
-  <div class="card-content"> <br>
-    <h5>Artist/Album/Track:</h5>
-      <p>{{artist}}</p> 
-      <p>{{album}}</p> 
-      <p>{{song}}</p>
+  <div class="card-content">
+    <h5 class="card-music">Artist - Album - Track</h5>
+      <h4>{{artist}}</h4> 
+      <h4>{{album}}</h4> 
+      <h4>{{song}}</h4>
+      <br><br>
   </div>
   <div class="text-center">
-    <p>{{description}}</p> <br><br>
+    <h5 class="desc">{{description}}</h5> <br><br>
   </div>
-
-  <p>Created by <a href="/user/{{id}}">{{user.name}}</a> on {{format_date date_created}}</p><br>
-  <div class="is-pulled-right" data-lyket-type='updown' data-lyket-id='my-first-post'></div>
-
-</div>
-
-
-<div class='text-center'>
-  <h1>{{title}}</h1>
-  <br /><br /><br />
-  <h5>Artist | Album | Track </h5>
-  <h3>
-    {{post.artist}}
-    {{album}}
-    {{song}}
-
-  </h3>
-
-  <h3>{{description}}</h3><br /><br /><br />
-  <h5>Created by
-    {{user.name}}
-    on
-    {{format_date date_created}}
-    <br /><br />
-    <div data-lyket-type='updown' data-lyket-id='my-first-post'></div>
-  </h5>
-
+  <p class="comment-post">Created by <a href="/user/{{user_id}}">{{user.name}}</a> 
+    on {{format_date date_created}}</p><br>
+  <div class="thumbs" data-lyket-type='updown' data-lyket-id='my-first-post'></div>
 </div>
 
 <br />
+{{!-- <h6>Comments:</h6> --}}
+<div class="comment">
 {{#each com as |comment|}}
 <h6>Comments:</h6>
-"{{comment.comment_body}}" -- posted by username
+"{{comment.comment_body}}" -- posted by an anonymous music snobber
+{{!-- <a href="/user/{{user_id}}">df</a> --}}
+<br> 
 {{/each}}
-on
-{{format_date date_created}}
-<br />
+<br /><br><br><br>
+</div>
 
 {{#if logged_in}}
 <br /><br /><br>
@@ -66,7 +46,7 @@ on
     <input class='form-input' placeholder='Comment..' type='text' id='comment-name' name='comment-name' />
   </div>
   <div class='form-group'>
-    <button type='submit' class='btn btn-primary' id='comment'>Post Comment</button>
+    <button type='submit' class='btn btn-primary' class="comment-name" id='comment-name'>Post Comment</button>
   </div>
 </form>
 
@@ -77,4 +57,7 @@ on
 
 <script src='https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_f4fc27bfe559f3d29b01bbf674da0f'></script>
 
+<script src="./js/profile.js"></script>
+
 </div>
+

@@ -23,6 +23,18 @@ Post.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+    artist: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    album: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
+    song: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
