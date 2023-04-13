@@ -1,10 +1,15 @@
-<!-- Loop over each object in the projects array -->
-{{#each posts as |post|}}
+<div class='title'>
+  <h1>Another Bad Music Review</h1>
+  <p>An app for people to post about their favorite artists, albums, songs, etc.
+    and see how others view their music taste. Or something.
+  </p>
+</div>
+<br /><br /><br /><br />
+
+{{!-- {{#each posts as |post|}}
   <div class='row mb-4 post'>
     <div class='col-md-5'>
       <h2>
-        <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-        {{{get_emoji}}}
         <a href='/post/{{post.id}}'></a>
       </h2>
       <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
@@ -21,3 +26,34 @@
     </div>
   </div>
 {{/each}}
+ --}}
+
+{{#each posts as |post|}}
+  <div class='row mb-4 post'>
+    <div class='col-md-7'>
+      {{! Displays the Blog Post's Title --> routes to the blog post when you click on the title }}
+      <h2>
+        {{! routes to this specific post's page }}
+        <a href='/post/{{post.id}}'>
+          {{! displays the name of the Post and makes it clickable to that ^ route }}
+          {{post.title}}
+        </a>
+      </h2>
+      <div class='col-md-5'>
+        <h2>
+          <a href='/post/{{post.id}}'></a>
+          {{! displays the date it was created and by which user }}
+          <p>Posted on
+            {{format_date post.date_created}}
+            by music snob user:<br />
+            <a href="/user/{{id}}">{{post.user.name}}</a>
+        </h2>
+
+      </div>
+      <p>
+        {{!-- {{post.description}} --}}
+      </p>
+    </div>
+  </div>
+{{/each}}
+

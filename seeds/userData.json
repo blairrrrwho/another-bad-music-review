@@ -1,23 +1,44 @@
 [
   {
-    "id": 1,
-    "name": "test1",
-    "email": "test1@hotmail.com",
+    "name": "Blair",
+    "email": "blair10324@gmail.com",
     "password": "password12345",
-    "bio": "I am tester 1"
+    "bio": "Christina is my twin."
   },
   {
-    "id": 2,
-    "name": "test2",
-    "email": "test2@Gmail.com",
+    "name": "Christina",
+    "email": "christina@gmail.com",
     "password": "password12345",
-    "bio": "I am tester 2"
+    "bio": "Blair is my twin."
   },
   {
-    "id": 3,
-    "name": "test3",
-    "email": "tes3@yahoo.com",
+    "name": "Lacey",
+    "email": "lacey@yahoo.com",
     "password": "password12345",
-    "bio": "I am tester 3"
+    "bio": "I'm from Canada."
+  },
+  {
+    "name": "Iman",
+    "email": "iman@yahoo.com",
+    "password": "password12345",
+    "bio": "I speak two languages."
+  },
+  {
+    "name": "Terry",
+    "email": "terry@yahoo.com",
+    "password": "password12345",
+    "bio": "I have a cat, and he wears jackets and sweaters AND hoodies."
+  },
+  {
+    "name": "Stephen",
+    "email": "stephen@yahoo.com",
+    "password": "password12345",
+    "bio": "I love bikes with motors."
+  },
+  {
+    "name": "Eddie G",
+    "email": "eddie@yahoo.com",
+    "password": "password12345",
+    "bio": "I work at Office Max."
   }
 ]

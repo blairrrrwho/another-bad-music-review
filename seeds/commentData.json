@@ -1,7 +1,38 @@
 [
-    {
-      "comment_body": "testtesttesttest",
-      "date_created": "01/20/1993",
-      "post_id": 3
-    }
+  {
+    "user_id": 1,
+    "post_id": 3,
+    "comment_body": "Wooooooooow totally agree",
+    "date_created": "04/13/2023"
+  },
+  {
+    "user_id": 2,
+    "post_id": 5,
+    "comment_body": "Total trash man",
+    "date_created": "04/13/2023"
+  },
+  {
+    "user_id": 3,
+    "post_id": 1,
+    "comment_body": "Definitely agree",
+    "date_created": "04/13/2023"
+  },
+  {
+    "user_id": 4,
+    "post_id": 2,
+    "comment_body": "Wow wouldn't ever listen to that again",
+    "date_created": "04/13/2023"
+  },
+  {
+    "user_id": 5,
+    "post_id": 3,
+    "comment_body": "I love this.",
+    "date_created": "04/13/2023"
+  },
+  {
+    "user_id": 6,
+    "post_id": 4,
+    "comment_body": "Isn't this site the best?",
+    "date_created": "04/13/2023"
+  }
 ]
