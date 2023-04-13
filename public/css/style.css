@@ -4,8 +4,7 @@
 }
 
 body {
-  background-color: #a7b3cc67;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #ECF2FF;
 }
 
 .wrapper {
@@ -19,14 +18,19 @@ h1 {
   color: #3E54AC;
   text-align: center;
   font-family: 'PressStart', Arial, Helvetica, sans-serif;
-  text-align: center;
-  /* border-style: solid;
+  text-align: left;
+  border-style: dashed;
   border-color: #BFACE2;
   border-width: 10px;
-  border-padding: 90px; */
+  letter-spacing: 12px;
+  padding: 4%;
+  display: inline-block;
+  width: 85px;
+  padding-right: 40px;
+  
 
 }
-.headerImg {
+/* .headerImg {
   opacity: 0.2;
   position: absolute;
   left: 350px;
@@ -40,12 +44,22 @@ h1 {
   height: 600px;
   align-items: center;
   justify-content: center;
-}
-h6 {
-  padding: 100px;
+} */
+
+h5 {
+  padding-bottom: 100px;
+  font-family: 'PressStart', Arial, Helvetica, sans-serif;
   text-align: center;
+  color:#4c459c;
 }
 
 input {
   width: 300px !important
 }
+
+@media screen and (max-width: 980px){
+  
+}
+
+
+

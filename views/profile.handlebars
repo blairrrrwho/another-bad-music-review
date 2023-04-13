@@ -4,21 +4,34 @@
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
+<div class='row mt-4'>
+  <div class='col-md-6'>
     <h3>Create a New Post:</h3>
 
-    <form class="form new-post-form">
-      <div class="form-group">
-        <label for="post-name">post name:</label>
-        <input class="form-input" type="text" id="post-name" name="post-name" />
+    <form class='form new-post-form'>
+      <div class='form-group'>
+        <label for='post-name'>Title:</label>
+        <input class='form-input' placeholder='Post Title' type='text' id='post-name' name='post-name' />
       </div>
-      <div class="form-group">
-        <label for="post-desc">description:</label>
-        <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
+      <div class='form-group'>
+        <label for='artist-desc'>Artist Name:</label>
+        <textarea class='form-input' placeholder='Required' id='artist-desc' name='artist-desc'></textarea>
       </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+      <div class='form-group'>
+        <label for='album-desc'>Album Title:</label>
+        <textarea class='form-input' placeholder='Optional' id='album-desc' name='album-desc'></textarea>
+      </div>
+      <div class='form-group'>
+        <label for='song-desc'>Track Title:</label>
+        <textarea class='form-input' placeholder='Required' id='song-desc' name='song-desc'></textarea>
+      </div>
+      <div class='form-group'>
+        <label for='post-desc'>Description:</label>
+        <textarea class='form-input' placeholder='Spill your guts out about music! Overkill repeats, news, 
+          excitement, guts, glory' id='post-desc' name='post-desc'></textarea>
+      </div>
+      <div class='form-group'>
+        <button type='submit' class='btn btn-primary'>Create</button>
       </div>
     </form>
   </div>
@@ -39,7 +52,7 @@
     {{/each}}
   </div>
   {{/if}}
-  
+
 </div>
 
 <script src="./js/profile.js"></script>

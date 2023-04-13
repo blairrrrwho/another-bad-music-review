@@ -1,46 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
   <title>Another Bad Music Review</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel='stylesheet' href='/css/jass.css' />
+  <link rel='stylesheet' href='/css/style.css' />
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <nav class="display-flex justify-space-between align-center p-2" id="nav-bar">
-      <h1>
-        <a href="/" id="main-title">My Bad Music Taste</a>
-      </h1>
-      
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">Profile</a> |
-        <button class="no-button" id="logout">Logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
-      
+  <div class='flex-column justify-space-around'>
+    <nav class='display-flex justify-space-between align-center p-2' id='nav-bar'>
+      <ul>
+        <li>
+          <a href='/' id='main-title'>Home</a>
+        </li>
+      </ul>
+      {{#if logged_in}}
+      <ul>
+        <li>
+          <a href='/profile'>Profile</a> |
+          <button class='no-button' id='logout'>Logout</button>
+        </li>
+      </ul>
+      {{else}}
+      <ul>
+        <li>
+          <a href='/login'>Login</a>
+        </li>
+      </ul>
+      {{/if}}
     </nav>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
+
+
+    <main class='container container-fluid mt-5'>
+      {{{body}}}
     </main>
-    <footer class="footer">&copy; 2023 Another Bad Music Review</footer>
+
+    <footer class='footer'>
+      <p>&copy; Another Bad Music Review</p>
+    </footer>
   </div>
 
-  <!-- Render script for logged in users only -->
   {{#if logged_in}}
-  <script src="/js/logout.js"></script>
+  <script src='/js/logout.js'></script>
   {{/if}}
-  
+
   {{#if logged_in}}
-  <script src="/js/comment.js"></script>
+  <script src='/js/comment.js'></script>
   {{/if}}
-  
+
 </body>
 
 </html>

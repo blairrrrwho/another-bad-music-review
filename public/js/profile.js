@@ -3,17 +3,20 @@ const newFormHandler = async (event) => {
 
   const name = document.querySelector('#post-name').value.trim();
   const description = document.querySelector('#post-desc').value.trim();
+  const artist = document.querySelector('#artist-desc').value.trim();
+  const album = document.querySelector('#album-desc').value.trim();
+  const song = document.querySelector('#song-desc').value.trim();
 
   if (name && description) {
     const response = await fetch(`/api/post`, {
       method: 'POST',
-      body: JSON.stringify(
-        { title: name, 
-          description: description,
-        // date_created: date_created, //add date created
-          // like: like,
-          // dislike: dislike
-        }),
+      body: JSON.stringify({
+        title: name,
+        artist: artist,
+        album: album,
+        song: song,
+        description: description,
+      }),
       headers: {
         'Content-Type': 'application/json',
       },

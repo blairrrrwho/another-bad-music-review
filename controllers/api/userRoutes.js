@@ -1,5 +1,23 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Comment} = require('../../models');
+
+router.get('/:id', async(req, res) => {
+  try {
+    const userData = await User.findByPk({
+      where: {
+        id: req.params.id
+      },
+      include: [{model: Comment}]
+    })
+    if(!userData) {
+      res.status(404).json({message: "No user was found with this ID!"})
+    }
+    res.status(200).json(userData)
+  } catch(err) {
+    console.log("userRoutes")
+    res.status(500).json(err)
+  }
+})
 
 router.post('/', async (req, res) => {
   try {

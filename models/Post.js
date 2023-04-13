@@ -11,10 +11,6 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    // name: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -27,22 +23,6 @@ Post.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    like: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    dislike: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    // comments: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true,
-    //   references: {
-    //     model: 'comment',
-    //     key: 'id',
-    //   },
-    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
