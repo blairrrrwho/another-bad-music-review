@@ -53,5 +53,5 @@ document
 
 document
   .querySelector('.post-list')
-  .addEventListener('submit', delButtonHandler);
+  .addEventListener('click', delButtonHandler);
 
