@@ -15,8 +15,7 @@ Another Bad Music Review is a user-friendly web application designed to provide 
 - [Features](#features)
 - [Technologies](#technologies)
 - [License](#license)
-- [Credits](#credits)
-- [Contribution](#how-to-contribute)
+- [Developers](#developers)
 
 ## Installation
 
@@ -37,10 +36,7 @@ Another Bad Music Review is a user-friendly web application designed to provide 
   * To comment on a post, simply click on a post your'd like to comment on and use the comment text box to share your thoughts and opinions, discuss the music with other users, and learn from different perspectives. Once you've got your comment written, press post comment.
 
 ## Deployment
-
-* Websites
-  * [Github](https://github.com/)
-  * [Live Heroku App]()
+Live URL: <a href="https://another-bad-music-review.herokuapp.com/">Another Bad Music Review</a>
 
 ## Features
 add in NPM PACKAGES INFO HERE
@@ -51,29 +47,33 @@ add in NPM PACKAGES INFO HERE
 * MySQL
 * Node.js
 * Express.js
-* Handlebars, CSS
-* Homemade ORM
+* Handlebars
 * Sequelize
-* Server-side API
-* Integration API
-* RESTful API
 
 
 ## License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-This project is licensed under the MIT license. For more information about this license and what it entails visit:
-https://opensource.org/licenses/MIT
-
 This project is licensed under the MIT license. For more information about this license and what it entails, visit the MIT website <a href="https://opensource.org/licenses/MIT">here</a>.
 
 
 
-
-## Contributors
+## Developers
 
 <li><strong><a href="https://github.com/alimomin7861" target="__blank">Ali Momin</a>:</strong> Back-End Engineer; JavaScript, API</li>
-<li><strong><a href="https://github.com/blairrrrwho" target="__blank">Blair Millet</a>:</strong> Back-End Engineer; __________</li>
+
+<li><strong><a href="https://github.com/olivianit" target="__blank">Olivia Nitzel</a>:</strong> Front-End Engineer</li>
+
+<li><strong><a href="https://github.com/esanchez8k" target="__blank">Enrique Sanchez</a>:</strong> Front-End Engineer; Wireframe </li>
+
+<li><strong><a href="https://github.com/imanmogh" target="__blank">Iman Moghaddas</a>:</strong> Back-End Engineer; Front-End Engineer </li>
+
+<li><strong><a href="https://github.com/eddieg00 " target="__blank">Edward Gutierrez</a>:</strong> Back-End Engineer; Presentation, Front-End Engineer</li>
+
+<li><strong><a href="https://github.com/blairrrrwho" target="__blank">Blair Millet</a>:</strong> Full-Stack; Git Flow</li>
+
+
+
+
+
 
 
 
