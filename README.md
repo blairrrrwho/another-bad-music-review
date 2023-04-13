@@ -1,21 +1,13 @@
 [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# another-bad-music-review
+# Another Bad Music Review
 
 ## Description
-Project 2 - Another Bad Music Review
 
+Another Bad Music Review is a user-friendly web application designed to provide a platform for music lovers to share their (bad) opinions on specific songs from specific albums by specific artists. The application allows users to create profiles & create posts about their favorite songs, expressing their thoughts, opinions, & critiques about the music. Other users can read the posts, leave comments, & share their own opinions, making the application an engaging & interactive community for music lovers.
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
 
 ## Table of Contents
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -23,66 +15,68 @@ If your README is long, add a table of contents to make it easy for users to fin
 - [Features](#features)
 - [Technologies](#technologies)
 - [License](#license)
-- [Tests](#tests)
 - [Credits](#credits)
 - [Contribution](#how-to-contribute)
-- [Contact / Questions](#contact--questions)
 
 ## Installation
 
-No installation required -- this is a web-based application
+1. Download or clone repository
+2. Node.js is required to run the application
+3. `npm install` to install the required npm packages
+4. Application will be invoked by using the following command: `node server.js`
+5. Open your browser and go to `http://localhost:3001`
 
+## Usage
+* Creating Posts
+  * You must be logged in to create a post
+  * Once you are logged in, navigate to your Profile from the navigation bar where you can put in the track title, album, and artist and your post description where you can write your opinion on the song, express your thoughts on its lyrics, melody, rhythm, or any other aspect that stands out to you.
+  * Please note that your log-in session will be logged out after 10 minutes of no activity.
 
-## Usage (Instructions/How-To Use)
-
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
+* Commenting on Posts
+  * We encourage users to engage with each other by leaving comments on posts! 
+  * To comment on a post, simply click on a post your'd like to comment on and use the comment text box to share your thoughts and opinions, discuss the music with other users, and learn from different perspectives. Once you've got your comment written, press post comment.
 
 ## Deployment
-Live URL: <a href="deployed link">Deployment Link</a>
 
-<!-- in the parentheses is just the relative path to the screenshot-->
-![alt text](assets/images/screenshot.png)
-
+* Websites
+  * [Github](https://github.com/)
+  * [Live Heroku App]()
 
 ## Features
-
-If your project has a lot of features, list them here.
+add in NPM PACKAGES INFO HERE
 
 
 ## Technologies
-JavaScript, HTML, CSS, Node.js, Express.js, MySQL, Java, C, C#, C++, Python, Other, N/A
+* JavaScript
+* MySQL
+* Node.js
+* Express.js
+* Handlebars, CSS
+* Homemade ORM
+* Sequelize
+* Server-side API
+* Integration API
+* RESTful API
 
 
 ## License
-[![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This project is licensed under the MIT license. For more information about this license and what it entails visit: https://opensource.org/licenses/MIT
-This project is licensed under the MIT license. For more information about this license and what it entails, visit the MIT website <a href="https://opensource.org/licenses/MIT">here</a>
+This project is licensed under the MIT license. For more information about this license and what it entails visit:
+https://opensource.org/licenses/MIT
 
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+This project is licensed under the MIT license. For more information about this license and what it entails, visit the MIT website <a href="https://opensource.org/licenses/MIT">here</a>.
 
 
-## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
 
 
-## How to Contribute
+## Contributors
 
-If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+<li><strong><a href="https://github.com/alimomin7861" target="__blank">Ali Momin</a>:</strong> Back-End Engineer; JavaScript, API</li>
+<li><strong><a href="https://github.com/blairrrrwho" target="__blank">Blair Millet</a>:</strong> Back-End Engineer; __________</li>
 
-## Contact / Questions
-* put all github usernames, etc profiles 
 
-  If you liked this project and want to see more, feel free to check out my other repos [here](https://github.com/blairrrrwho).  
-  For any questions or inquiries, you can reach me at blair10324@gmail.com for further information.
+
+
+- - -  
+© 2023 Another Bad Music Review, Inc. All Rights Reserved.

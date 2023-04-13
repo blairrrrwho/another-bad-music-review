@@ -1,0 +1,55 @@
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Another Bad Music Review</title>
+  <link rel='stylesheet' href='/css/jass.css' />
+  <link rel='stylesheet' href='/css/style.css' />
+</head>
+
+<body>
+  <div class='flex-column justify-space-around'>
+    <nav class='display-flex justify-space-between align-center p-2' id='nav-bar'>
+      <ul>
+        <li>
+          <a href='/' id='main-title'>Home</a>
+        </li>
+      </ul>
+      {{#if logged_in}}
+      <ul>
+        <li>
+          <a href='/profile'>Profile</a> |
+          <button class='no-button' id='logout'>Logout</button>
+        </li>
+      </ul>
+      {{else}}
+      <ul>
+        <li>
+          <a href='/login'>Login</a>
+        </li>
+      </ul>
+      {{/if}}
+    </nav>
+
+
+    <main class='container container-fluid mt-5'>
+      {{{body}}}
+    </main>
+
+    <footer class='footer'>
+      <p>&copy; Another Bad Music Review</p>
+    </footer>
+  </div>
+
+  {{#if logged_in}}
+  <script src='/js/logout.js'></script>
+  {{/if}}
+
+  {{#if logged_in}}
+  <script src='/js/comment.js'></script>
+  {{/if}}
+
+</body>
+
+</html>
