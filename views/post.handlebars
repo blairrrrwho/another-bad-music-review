@@ -9,13 +9,14 @@
       <span class=""> </span>
     </div>
   </header>
+  <br>
 
   <div class="card-content">
-    <h5 class="card-music">Artist - Album - Track</h5><br>
+    <h5 class="card-music">Artist - Album - Track</h5>
       <h4>{{artist}}</h4> 
       <h4>{{album}}</h4> 
       <h4>{{song}}</h4>
-      <br><br><br>
+      <br><br>
   </div>
   <div class="text-center">
     <h5 class="desc">{{description}}</h5> <br><br>
@@ -28,11 +29,9 @@
 <br />
 {{#each com as |comment|}}
 <h6>Comments:</h6>
-"{{comment.comment_body}}" -- posted by {{comment.user.name}}</a> 
+"{{comment.comment_body}}" -- posted by<a href="/user/{{user_id}}">df</a><br> 
 {{/each}}
-on
-{{format_date date_created}}
-<br />
+<br /><br><br><br>
 
 {{#if logged_in}}
 <br /><br /><br>
