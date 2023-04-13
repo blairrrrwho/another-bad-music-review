@@ -13,15 +13,15 @@
     "date_created": "7/15/2014",
     "artist": "Taylor Swift",
     "album": "Red",
-    "song": ""
+    "song": "All Too Well"
   },
   {
     "title": "Man, it's classic rock day!",
     "description": "Would have loved to see them live back in the 70s",
     "date_created": "3/14/2022",
     "artist": "Led Zeppelin",
-    "album": "",
-    "song": ""
+    "album": "Led Zeppelin IV",
+    "song": "When the Levee Breaks"
   },
   {
     "title": "I love music so much that my project team members hate me.",
@@ -36,7 +36,7 @@
     "description": "Saw the tour which was amazing. Most songs were good but a lot of fillers",
     "date_created": "2/8/2023",
     "artist": "A Tribe Called Quest",
-    "album": "",
+    "album": "Anthology",
     "song": ""
   }
 ]

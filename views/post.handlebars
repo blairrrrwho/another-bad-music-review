@@ -1,4 +1,4 @@
-<div class='card mb-6'>
+<div class='card postcard mb-6'>
   <header class="card-header card-header-title has-background-grey-lighter">
     <div class="column">
       <h3>
@@ -27,11 +27,16 @@
 </div>
 
 <br />
+{{!-- <h6>Comments:</h6> --}}
+<div class="comment">
 {{#each com as |comment|}}
 <h6>Comments:</h6>
-"{{comment.comment_body}}" -- posted by<a href="/user/{{user_id}}">df</a><br> 
+"{{comment.comment_body}}" -- posted by an anonymous music snobber
+{{!-- <a href="/user/{{user_id}}">df</a> --}}
+<br> 
 {{/each}}
 <br /><br><br><br>
+</div>
 
 {{#if logged_in}}
 <br /><br /><br>
@@ -41,7 +46,7 @@
     <input class='form-input' placeholder='Comment..' type='text' id='comment-name' name='comment-name' />
   </div>
   <div class='form-group'>
-    <button type='submit' class='btn btn-primary' id='comment'>Post Comment</button>
+    <button type='submit' class='btn btn-primary' class="comment-name" id='comment-name'>Post Comment</button>
   </div>
 </form>
 
@@ -51,6 +56,8 @@
 {{/if}}
 
 <script src='https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_f4fc27bfe559f3d29b01bbf674da0f'></script>
+
+<script src="./js/profile.js"></script>
 
 </div>
 
