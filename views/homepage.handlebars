@@ -1,8 +1,11 @@
 <div class='title'>
   <h1>Another Bad Music Review</h1>
-  <p>Welcome to ABMR! Create a profile so you can leave your music reviews, 
-    good or bad our website doesn't discriminate, but everyone else might! 
-    Also make sure to comment on others posts to let them know how you really feel!
+  <p>Welcome to Another Bad Music Review! Create a profile so you can leave your music reviews, 
+    good or bad -- our website doesn't discriminate, but it gives everyone else a chance to! 
+    That said, make sure to comment on others posts to let them know how you really feel.
+    Our site will allow you to learn more about music, provide a safe place for you to share your obsessions, and allow
+    you to connect with other music nerds.
+    Have fun!
   </p>
 </div>
 <br /><br /><br /><br />
@@ -31,7 +34,7 @@
 
 {{#each posts as |post|}}
   <div class='row mb-4 post'>
-    <div class='col-md-7'>
+    <div class='col-md-12'>
       {{! Displays the Blog Post's Title --> routes to the blog post when you click on the title }}
       <h2>
         {{! routes to this specific post's page }}
@@ -40,14 +43,15 @@
           {{post.title}}
         </a>
       </h2>
-      <div class='col-md-5'>
+      <div class='col-md-9'>
         <h2>
           <a href='/post/{{post.id}}'></a>
           {{! displays the date it was created and by which user }}
           <p>Posted on
             {{format_date post.date_created}}
-            by music snob user:<br />
-            <a href="/user/{{id}}">{{post.user.name}}</a>
+            by music snob:<br />
+            <a class = "snob" href="/user/{{user_id}}">{{user.name}}</a> on {{format_date date_created}}<br>
+
         </h2>
 
       </div>
@@ -58,3 +62,13 @@
   </div>
 {{/each}}
 
+<div class="mode-layer"></div>
+<div class="flip-card mode-button mode-animation">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">🌙</div>
+    <div class="flip-card-back">🔆</div>
+  </div>
+</div>
+
+<script src="/js/toggle.js"> </script>
+<script src="../node_modules/dark-mode-light-mode/index.js"></script>
