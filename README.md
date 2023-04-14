@@ -35,7 +35,9 @@ Another Bad Music Review is a user-friendly web application designed to provide 
   * To comment on a post, simply click on a post your'd like to comment on and use the comment text box to share your thoughts and opinions, discuss the music with other users, and learn from different perspectives. Once you've got your comment written, press post comment.
 
 ## Deployment
-Live URL: <a href="https://another-bad-music-review-woo.herokuapp.com/">Another Bad Music Review</a>
+Live URL: <a href="https://another-bad-music-review-woo.herokuapp.com/">Another Bad Music Review</a>  
+
+![screentshot](./ABMR.png)
 
 
 
