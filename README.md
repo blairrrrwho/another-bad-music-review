@@ -37,6 +37,8 @@ Another Bad Music Review is a user-friendly web application designed to provide 
 ## Deployment
 Live URL: <a href="https://another-bad-music-review-woo.herokuapp.com/">Another Bad Music Review</a>
 
+
+
 ## Technologies
 * JavaScript
 * MySQL
